@@ -7,6 +7,7 @@ export default {
   'brand.name': '中文变体检查器',
   'nav.home': '首页',
   'nav.docs': '文档',
+  'nav.products': '产品',
   'a11y.theme': '切换深浅色主题',
   'a11y.menu': '打开菜单',
   'lang.label': '选择语言',
@@ -89,10 +90,8 @@ export default {
   'steps.3.desc': '在编辑区看到标记后逐条替换、忽略一次，或把词语加入允许词。',
 
 
-  'docs.eyebrow': '使用文档',
   'docs.hero.title': '从安装到自定义词库',
   'docs.hero.desc': '三个平台共用同一套检查思路：选定目标地区，输入时看到差异，确认后就地替换。',
-  'docs.sidebar.title': '文档目录',
   'docs.nav.overview': '概览',
   'docs.nav.quickstart': '快速开始',
   'docs.nav.browser': '浏览器扩展',
@@ -101,8 +100,6 @@ export default {
   'docs.nav.dictionary': '词库与自定义',
   'docs.nav.faq': '常见问题',
   'docs.nav.legal': '隐私与许可',
-  'docs.back': '返回首页',
-  'docs.toc.title': '本页目录',
 
   'docs.overview.lead': 'CVL（Chinese Variants Linter，中文变体检查器）检查简繁字形和地区用词是否与目标中文地区一致，并给出就地修改建议。',
   'docs.overview.p': '它适用于内容编辑、客服话术、表单填写和跨地区发布前的中文校对。检查在本机完成，网页文本、文档内容与词库不会上传到服务器。',

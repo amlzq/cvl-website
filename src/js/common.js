@@ -1,8 +1,10 @@
 import { initI18n } from './i18n.js'
+import { initProducts } from './products.js'
 
 const root = document.documentElement
 root.classList.add('js')
 initI18n()
+initProducts()
 
 const themeKey = 'cvl-theme'
 const storedTheme = localStorage.getItem(themeKey)

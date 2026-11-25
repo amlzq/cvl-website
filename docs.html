@@ -64,34 +64,27 @@
 
     <main>
       <div class="docs-hero">
-        <div class="container">
-          <span class="eyebrow" data-i18n="docs.eyebrow">使用文档</span>
-          <h1 data-i18n="docs.hero.title">从安装到自定义词库</h1>
-          <p data-i18n="docs.hero.desc">三个平台共用同一套检查思路：选定目标地区，输入时看到差异，确认后就地替换。</p>
+        <div class="container docs-hero-inner">
+          <div class="docs-hero-copy">
+            <h1 data-i18n="docs.hero.title">从安装到自定义词库</h1>
+            <p data-i18n="docs.hero.desc">三个平台共用同一套检查思路：选定目标地区，输入时看到差异，确认后就地替换。</p>
+          </div>
+          <div class="product-menu" id="product-menu">
+            <button class="product-hero-toggle" id="product-toggle" type="button" aria-haspopup="true" aria-expanded="false">
+              <span data-i18n="nav.products">产品</span><span class="caret" aria-hidden="true">▾</span>
+            </button>
+            <div class="product-list" id="product-list" role="menu">
+              <a href="/docs.html?product=browser" data-product="browser" data-i18n="docs.nav.browser">浏览器扩展</a>
+              <a href="/docs.html?product=office" data-product="office" data-i18n="docs.nav.office">Office 加载项</a>
+              <a href="/docs.html?product=macos" data-product="macos" data-i18n="docs.nav.macos">macOS 应用</a>
+            </div>
+          </div>
         </div>
       </div>
 
       <div class="container docs-shell">
-        <aside class="docs-sidebar" aria-label="文档导航">
-          <div class="docs-sidebar-title" data-i18n="docs.sidebar.title">文档目录</div>
-          <nav class="docs-nav">
-            <a href="#overview" class="is-active" data-i18n="docs.nav.overview">概览</a>
-            <a href="#quickstart" data-i18n="docs.nav.quickstart">快速开始</a>
-            <a href="#browser" data-i18n="docs.nav.browser">浏览器扩展</a>
-            <a href="#office" data-i18n="docs.nav.office">Office 加载项</a>
-            <a href="#macos" data-i18n="docs.nav.macos">macOS 应用</a>
-            <a href="#dictionary" data-i18n="docs.nav.dictionary">词库与自定义</a>
-            <a href="#faq" data-i18n="docs.nav.faq">常见问题</a>
-            <a href="#legal" data-i18n="docs.nav.legal">隐私与许可</a>
-          </nav>
-          <div class="docs-sidebar-foot">
-            <a href="https://github.com/amlzq" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
-            <a href="/" data-i18n="docs.back">返回首页</a>
-          </div>
-        </aside>
-
         <article class="docs-content">
-          <section id="overview">
+          <section id="overview" data-products="all">
             <h2 data-i18n="docs.nav.overview">概览</h2>
             <p class="docs-lead" data-i18n="docs.overview.lead">
               CVL（Chinese Variants Linter，中文变体检查器）检查简繁字形和地区用词是否与目标中文地区一致，并给出就地修改建议。
@@ -115,7 +108,7 @@
             </div>
           </section>
 
-          <section id="quickstart">
+          <section id="quickstart" data-products="all">
             <h2 data-i18n="docs.nav.quickstart">快速开始</h2>
             <h3 data-i18n="docs.quick.s1">1. 选择平台</h3>
             <p data-i18n="docs.quick.s1p">按你的工作环境安装浏览器扩展、Word 加载项或 macOS 菜单栏应用。当前安装 / 下载链接均指向各产品仓库，作为占位。</p>
@@ -128,7 +121,7 @@
             </div>
           </section>
 
-          <section id="browser">
+          <section id="browser" data-products="browser">
             <h2 data-i18n="docs.nav.browser">浏览器扩展</h2>
             <p data-i18n-html="docs.browser.intro">适用于网页中的 <code>textarea</code>、文本 <code>input</code> 与 <code>contenteditable</code> 编辑区。</p>
 
@@ -160,7 +153,7 @@
             </div>
           </section>
 
-          <section id="office">
+          <section id="office" data-products="office">
             <h2 data-i18n="docs.nav.office">Office 加载项</h2>
             <p data-i18n="docs.office.intro">CVL for Office 是一个 Word 加载项（任务窗格）：检查文档中混用的简体 / 繁体字形与两岸三地用词，逐条替换到目标写法。检查全部在本机完成，文档内容不会上传。</p>
 
@@ -179,7 +172,7 @@
             </div>
           </section>
 
-          <section id="macos">
+          <section id="macos" data-products="macos">
             <h2 data-i18n="docs.nav.macos">macOS 应用</h2>
             <p data-i18n="docs.macos.intro">中文变体检查器的 macOS 版。常驻菜单栏，在任意应用的输入框中检查中文简繁字形和地区用词是否与目标地区一致，并提供就地替换。</p>
 
@@ -199,7 +192,7 @@
             </div>
           </section>
 
-          <section id="dictionary">
+          <section id="dictionary" data-products="all">
             <h2 data-i18n="docs.nav.dictionary">词库与自定义</h2>
             <p data-i18n="docs.dict.intro">各平台都提供允许词与自定义词组，并按目标地区分开保存，避免一套词库影响所有地区。</p>
 
@@ -228,7 +221,7 @@
             </div>
           </section>
 
-          <section id="faq">
+          <section id="faq" data-products="all">
             <h2 data-i18n="docs.nav.faq">常见问题</h2>
 
             <details class="faq-item">
@@ -257,7 +250,7 @@
             </details>
           </section>
 
-          <section id="legal">
+          <section id="legal" data-products="all">
             <h2 data-i18n="docs.legal.title">隐私与许可</h2>
             <p data-i18n-html="docs.legal.p1">
               三个产品均以 MIT 许可开源。浏览器扩展只声明 <code>storage</code> 与 <code>activeTab</code> 权限；文本、词库与设置均在本地处理。Office 加载项与 macOS 应用同样不上传内容。
@@ -272,8 +265,7 @@
           </section>
         </article>
 
-        <aside class="docs-toc" aria-label="本页目录">
-          <div class="docs-toc-title" data-i18n="docs.toc.title">本页目录</div>
+        <aside class="docs-toc" aria-label="目录">
           <nav id="docs-toc-nav"></nav>
         </aside>
       </div>
@@ -310,6 +302,8 @@
             <ul>
               <li><a href="https://github.com/amlzq" target="_blank" rel="noopener noreferrer">GitHub</a></li>
               <li><a href="/docs.html#legal" data-i18n="footer.privacy">隐私与许可</a></li>
+              <li><a href="/privacy.html" data-i18n="footer.privacyPolicy">隐私权政策</a></li>
+              <li><a href="/terms.html" data-i18n="footer.terms">服务条款</a></li>
             </ul>
           </div>
         </div>

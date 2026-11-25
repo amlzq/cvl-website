@@ -146,24 +146,6 @@ h3[id] {
   font-size: 16.5px;
 }
 
-.eyebrow {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  color: var(--brand);
-  font-size: 13px;
-  font-weight: 700;
-  letter-spacing: 0.12em;
-}
-
-.eyebrow::before {
-  content: '';
-  width: 18px;
-  height: 2px;
-  border-radius: 2px;
-  background: currentColor;
-}
-
 .gradient-text {
   background: linear-gradient(100deg, var(--brand), var(--brand-2));
   -webkit-background-clip: text;
@@ -309,6 +291,75 @@ h3[id] {
 
 .nav-link.nav-github::after {
   display: none;
+}
+
+.product-menu {
+  position: relative;
+}
+
+.product-hero-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 16px;
+  border: 1px solid var(--border-strong);
+  border-radius: 10px;
+  background: var(--bg-elev);
+  color: var(--text);
+  font-size: 14px;
+  font-weight: 650;
+  white-space: nowrap;
+}
+
+.product-hero-toggle:hover {
+  border-color: var(--brand);
+  color: var(--brand);
+}
+
+.product-hero-toggle .caret {
+  font-size: 10px;
+  transition: transform 0.18s ease;
+}
+
+.product-menu.is-open .product-hero-toggle .caret {
+  transform: rotate(180deg);
+}
+
+.product-list {
+  position: absolute;
+  top: calc(100% + 10px);
+  left: 0;
+  z-index: 60;
+  display: none;
+  min-width: 170px;
+  padding: 6px;
+  border: 1px solid var(--border);
+  border-radius: 11px;
+  background: var(--bg-elev);
+  box-shadow: var(--shadow-lg);
+}
+
+.product-menu.is-open .product-list {
+  display: block;
+}
+
+.product-list a {
+  display: block;
+  padding: 9px 11px;
+  border-radius: 7px;
+  color: var(--text-muted);
+  font-size: 13.5px;
+}
+
+.product-list a:hover {
+  background: var(--bg-soft);
+  color: var(--brand);
+}
+
+.product-list a.is-active {
+  background: var(--brand-soft);
+  color: var(--brand);
+  font-weight: 700;
 }
 
 .header-controls {

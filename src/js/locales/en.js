@@ -7,6 +7,7 @@ export default {
   'brand.name': 'Chinese Variants Linter',
   'nav.home': 'Home',
   'nav.docs': 'Docs',
+  'nav.products': 'Products',
   'a11y.theme': 'Toggle light and dark theme',
   'a11y.menu': 'Open menu',
   'lang.label': 'Select language',
@@ -89,10 +90,8 @@ export default {
   'steps.3.desc': 'When you see a mark, replace it, ignore it once, or add the term to your allow list.',
 
 
-  'docs.eyebrow': 'Documentation',
   'docs.hero.title': 'From installation to custom dictionaries',
   'docs.hero.desc': 'All three platforms share one approach: choose a target region, see differences as you type, and confirm replacements in place.',
-  'docs.sidebar.title': 'Contents',
   'docs.nav.overview': 'Overview',
   'docs.nav.quickstart': 'Quick start',
   'docs.nav.browser': 'Browser add-ons',
@@ -101,8 +100,6 @@ export default {
   'docs.nav.dictionary': 'Dictionaries',
   'docs.nav.faq': 'FAQ',
   'docs.nav.legal': 'Privacy & License',
-  'docs.back': 'Back to home',
-  'docs.toc.title': 'On this page',
 
   'docs.overview.lead': 'CVL (Chinese Variants Linter) checks whether simplified/traditional character forms and regional wording match your target Chinese region, and suggests fixes in place.',
   'docs.overview.p': 'It is useful for content editing, support replies, form filling and proofreading before cross-region publishing. Checks run locally; web text, document content and dictionaries are never uploaded.',

@@ -12,6 +12,8 @@ export default defineConfig({
       input: {
         home: resolve(root, 'index.html'),
         docs: resolve(root, 'docs.html'),
+        privacy: resolve(root, 'privacy.html'),
+        terms: resolve(root, 'terms.html'),
       },
     },
   },

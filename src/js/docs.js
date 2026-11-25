@@ -1,29 +1,40 @@
 import { t, onLocaleChange } from './i18n.js'
+import { onProductChange } from './products.js'
 
 const content = document.querySelector('.docs-content')
 const tocNav = document.getElementById('docs-toc-nav')
-const sidebarLinks = Array.from(document.querySelectorAll('.docs-nav a'))
 let headings = []
-let tocLinks = []
-let sections = []
 let ticking = false
 
+function visibleHeadings() {
+  return headings.filter((heading) => {
+    const section = heading.closest('section[data-products]')
+    return section && !section.hidden
+  })
+}
+
 function updateActive() {
+  const list = visibleHeadings()
+  if (!list.length || !tocNav) {
+    ticking = false
+    return
+  }
+
   const offset = 150
-
-  let activeHeading = headings[0]?.id
-  headings.forEach((heading) => {
-    if (heading.getBoundingClientRect().top <= offset) activeHeading = heading.id
+  let activeId = list[0].id
+  list.forEach((heading) => {
+    if (heading.getBoundingClientRect().top <= offset) activeId = heading.id
   })
-  tocLinks.forEach((link) => link.classList.toggle('is-active', link.hash === `#${activeHeading}`))
 
-  let activeSection = sections[0]?.id
-  sections.forEach((section) => {
-    if (section.getBoundingClientRect().top <= offset) activeSection = section.id
+  tocNav.querySelectorAll('a').forEach((link) => {
+    link.classList.toggle('is-active', link.hash === `#${activeId}`)
   })
-  sidebarLinks.forEach((link) =>
-    link.classList.toggle('is-active', link.hash === `#${activeSection}`),
-  )
+  tocNav.querySelectorAll('.toc-group').forEach((group) => {
+    const active = Array.from(group.querySelectorAll('a')).some(
+      (link) => link.hash === `#${activeId}`,
+    )
+    if (active) group.classList.add('is-expanded')
+  })
 
   ticking = false
 }
@@ -37,8 +48,11 @@ function requestUpdate() {
 
 function buildToc() {
   if (!content || !tocNav) return
-  sections = Array.from(content.querySelectorAll('section[id]'))
-  headings = Array.from(content.querySelectorAll('h2, h3'))
+
+  headings = Array.from(content.querySelectorAll('h2, h3')).filter((heading) => {
+    const section = heading.closest('section[data-products]')
+    return section && !section.hidden
+  })
 
   headings.forEach((heading, index) => {
     if (heading.dataset.tocId) return
@@ -54,20 +68,64 @@ function buildToc() {
   })
 
   tocNav.innerHTML = ''
+  let currentGroup = null
+
   headings.forEach((heading) => {
-    const link = document.createElement('a')
-    link.href = `#${heading.id}`
-    link.textContent = heading.textContent.trim()
-    if (heading.tagName === 'H3') link.classList.add('is-sub')
-    tocNav.appendChild(link)
+    if (heading.tagName === 'H2') {
+      const group = document.createElement('div')
+      group.className = 'toc-group'
+
+      const head = document.createElement('div')
+      head.className = 'toc-head'
+
+      const link = document.createElement('a')
+      link.href = `#${heading.id}`
+      link.textContent = heading.textContent.trim()
+      link.className = 'toc-parent'
+      link.addEventListener('click', () => group.classList.add('is-expanded'))
+
+      const expand = document.createElement('button')
+      expand.type = 'button'
+      expand.className = 'toc-expand'
+      expand.textContent = '▾'
+      expand.setAttribute('aria-label', heading.textContent.trim())
+      expand.addEventListener('click', (event) => {
+        event.stopPropagation()
+        group.classList.toggle('is-expanded')
+      })
+
+      head.append(link, expand)
+      group.appendChild(head)
+
+      const subs = document.createElement('div')
+      subs.className = 'toc-subs'
+      group.appendChild(subs)
+
+      currentGroup = group
+      tocNav.appendChild(group)
+    } else if (currentGroup) {
+      const sub = document.createElement('a')
+      sub.href = `#${heading.id}`
+      sub.textContent = heading.textContent.trim()
+      sub.className = 'is-sub'
+      currentGroup.querySelector('.toc-subs').appendChild(sub)
+      currentGroup.classList.add('has-subs')
+    }
   })
-  tocLinks = Array.from(tocNav.querySelectorAll('a'))
+
   updateActive()
 }
 
 buildToc()
 window.addEventListener('scroll', requestUpdate, { passive: true })
 window.addEventListener('resize', requestUpdate)
+
+onProductChange(() => {
+  requestAnimationFrame(() => {
+    buildToc()
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+  })
+})
 
 const copyButtons = []
 document.querySelectorAll('.code-block').forEach((block) => {

@@ -3,6 +3,11 @@ import zhTW from './locales/zh-tw.js'
 import zhHK from './locales/zh-hk.js'
 import zhHant from './locales/zh-hant.js'
 import en from './locales/en.js'
+import legalZhCN from './locales/legal-zh-cn.js'
+import legalZhTW from './locales/legal-zh-tw.js'
+import legalZhHK from './locales/legal-zh-hk.js'
+import legalZhHant from './locales/legal-zh-hant.js'
+import legalEn from './locales/legal-en.js'
 
 export const LOCALES = [
   { code: 'zh-cn', label: '简体中文', htmlLang: 'zh-CN' },
@@ -12,7 +17,13 @@ export const LOCALES = [
   { code: 'en', label: '英文', htmlLang: 'en' },
 ]
 
-const dictionaries = { 'zh-cn': zhCN, 'zh-tw': zhTW, 'zh-hk': zhHK, 'zh-hant': zhHant, en }
+const dictionaries = {
+  'zh-cn': { ...zhCN, ...legalZhCN },
+  'zh-tw': { ...zhTW, ...legalZhTW },
+  'zh-hk': { ...zhHK, ...legalZhHK },
+  'zh-hant': { ...zhHant, ...legalZhHant },
+  en: { ...en, ...legalEn },
+}
 const storageKey = 'cvl-locale'
 const listeners = new Set()
 let currentLocale = 'zh-cn'
