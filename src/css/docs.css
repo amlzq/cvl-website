@@ -254,16 +254,47 @@
 
 .platform-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   gap: 12px;
   margin: 20px 0;
 }
 
 .platform-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
   padding: 16px;
   border: 1px solid var(--border);
   border-radius: 11px;
   background: var(--bg-elev);
+  transition: border-color 0.18s ease, transform 0.18s ease;
+}
+
+.platform-item:hover {
+  border-color: var(--brand);
+  transform: translateY(-2px);
+}
+
+.platform-icon {
+  flex: none;
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: var(--bg-elev);
+}
+
+.platform-icon img {
+  width: 26px;
+  height: 26px;
+}
+
+.platform-text {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
 }
 
 .platform-item strong {
@@ -272,7 +303,7 @@
   font-size: 14.5px;
 }
 
-.platform-item span {
+.platform-text > span {
   color: var(--text-subtle);
   font-size: 12.5px;
 }
