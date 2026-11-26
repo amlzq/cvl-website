@@ -11,10 +11,10 @@ import legalEn from './locales/legal-en.js'
 
 export const LOCALES = [
   { code: 'zh-cn', label: '简体中文', htmlLang: 'zh-CN' },
-  { code: 'zh-tw', label: '中文（台湾）', htmlLang: 'zh-TW' },
   { code: 'zh-hk', label: '中文（香港）', htmlLang: 'zh-HK' },
-  { code: 'zh-hant', label: '繁体中文', htmlLang: 'zh-Hant' },
-  { code: 'en', label: '英文', htmlLang: 'en' },
+  { code: 'zh-tw', label: '中文（台灣）', htmlLang: 'zh-TW' },
+  { code: 'zh-hant', label: '繁體中文', htmlLang: 'zh-Hant' },
+  { code: 'en', label: 'English', htmlLang: 'en' },
 ]
 
 const dictionaries = {

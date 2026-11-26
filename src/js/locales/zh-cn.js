@@ -10,11 +10,6 @@ export default {
   'a11y.theme': '切换深浅色主题',
   'a11y.menu': '打开菜单',
   'lang.label': '选择语言',
-  'locale.zh-cn': '简体中文',
-  'locale.zh-tw': '中文（台湾）',
-  'locale.zh-hk': '中文（香港）',
-  'locale.zh-hant': '繁体中文',
-  'locale.en': '英文',
 
   'footer.intro': '在输入时检查简繁字形与地区用词，给出就地修改建议。文本只在本机处理。',
   'footer.products': '产品',

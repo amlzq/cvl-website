@@ -10,11 +10,6 @@ export default {
   'a11y.theme': 'Toggle light and dark theme',
   'a11y.menu': 'Open menu',
   'lang.label': 'Select language',
-  'locale.zh-cn': '简体中文',
-  'locale.zh-tw': '中文（台湾）',
-  'locale.zh-hk': '中文（香港）',
-  'locale.zh-hant': '繁体中文',
-  'locale.en': 'English',
 
   'footer.intro': 'Checks character forms and regional word choices as you type, with suggested fixes in place. Text stays on your device.',
   'footer.products': 'Products',

@@ -1,4 +1,4 @@
-import { t, onLocaleChange } from './i18n.js'
+import { t, onLocaleChange, LOCALES } from './i18n.js'
 
 const issuePairs = [
   { from: '软件', to: '軟體', kind: 'demo.kindWord' },
@@ -34,7 +34,8 @@ function renderDemo() {
   }
 
   const target = document.getElementById('demo-target-name')
-  if (target) target.textContent = t('locale.zh-tw')
+  const zhTW = LOCALES.find((item) => item.code === 'zh-tw')
+  if (target && zhTW) target.textContent = zhTW.label
 
   const list = document.getElementById('demo-issues')
   if (list) {
