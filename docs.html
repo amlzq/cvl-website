@@ -71,7 +71,7 @@
           </div>
           <div class="product-menu" id="product-menu">
             <button class="product-hero-toggle" id="product-toggle" type="button" aria-haspopup="true" aria-expanded="false">
-              <span data-i18n="nav.products">产品</span><span class="caret" aria-hidden="true">▾</span>
+              <span data-product-current>浏览器扩展</span><span class="caret" aria-hidden="true">▾</span>
             </button>
             <div class="product-list" id="product-list" role="menu">
               <a href="/docs.html?product=browser" data-product="browser" data-i18n="docs.nav.browser">浏览器扩展</a>
@@ -95,6 +95,15 @@
             <div class="callout">
               <p data-i18n-html="docs.overview.callout"><strong>四种目标地区用语：</strong>简体中文、中文（台湾）、中文（香港）、繁体中文。</p>
             </div>
+            <div data-products="browser">
+              <p data-i18n-html="docs.browser.intro">适用于网页中的 <code>textarea</code>、文本 <code>input</code> 与 <code>contenteditable</code> 编辑区。</p>
+            </div>
+            <div data-products="office">
+              <p data-i18n="docs.office.intro">CVL for Office 是一个 Word 加载项（任务窗格）：检查文档中混用的简体 / 繁体字形与两岸三地用词，逐条替换到目标写法。检查全部在本机完成，文档内容不会上传。</p>
+            </div>
+            <div data-products="macos">
+              <p data-i18n="docs.macos.intro">中文变体检查器的 macOS 版。常驻菜单栏，在任意应用的输入框中检查中文简繁字形和地区用词是否与目标地区一致，并提供就地替换。</p>
+            </div>
             <div class="platform-grid">
               <a class="platform-item" href="https://github.com/amlzq/chinese-variants-linter" target="_blank" rel="noopener noreferrer">
                 <strong data-i18n="docs.nav.browser">浏览器扩展</strong><span data-i18n="docs.overview.browserSub">仓库占位链接</span>
@@ -108,6 +117,37 @@
             </div>
           </section>
 
+          <section id="install" data-products="all">
+            <h2 data-i18n="docs.nav.install">安装</h2>
+            <div data-products="browser">
+              <h3 data-i18n="docs.browser.install">安装</h3>
+              <div class="platform-grid">
+                <a class="platform-item" href="https://github.com/amlzq/chinese-variants-linter" target="_blank" rel="noopener noreferrer">
+                  <strong data-i18n="docs.browser.store1">Chrome 网上应用店</strong><span data-i18n="docs.browser.storeSub">链接暂指向仓库 · 占位</span>
+                </a>
+                <a class="platform-item" href="https://github.com/amlzq/chinese-variants-linter" target="_blank" rel="noopener noreferrer">
+                  <strong data-i18n="docs.browser.store2">Microsoft Edge 加载项</strong><span data-i18n="docs.browser.storeSub">链接暂指向仓库 · 占位</span>
+                </a>
+                <a class="platform-item" href="https://github.com/amlzq/chinese-variants-linter" target="_blank" rel="noopener noreferrer">
+                  <strong data-i18n="docs.browser.store3">Firefox 附加组件</strong><span data-i18n="docs.browser.storeSub">链接暂指向仓库 · 占位</span>
+                </a>
+              </div>
+              <div class="callout">
+                <p data-i18n-html="docs.browser.perm">扩展只声明 <code>storage</code> 与 <code>activeTab</code> 权限，设置与词库保存在浏览器本地存储中。</p>
+              </div>
+            </div>
+            <div data-products="office">
+              <h3 data-i18n="docs.office.req">环境要求与试用</h3>
+              <p data-i18n-html="docs.office.reqP">加载项需要 Word 桌面版或兼容环境。源码、构建步骤与试用方式见仓库中的 <code>docs/BUILD.md</code>。</p>
+              <a class="btn btn-secondary btn-small" href="https://github.com/amlzq/cvl-for-office" target="_blank" rel="noopener noreferrer" data-i18n="docs.office.btn">打开项目仓库（安装占位） →</a>
+            </div>
+            <div data-products="macos">
+              <h3 data-i18n="docs.macos.install">安装</h3>
+              <p data-i18n="docs.macos.installP">构建与安装说明见项目仓库；当前下载链接以仓库地址占位。</p>
+              <a class="btn btn-secondary btn-small" href="https://github.com/amlzq/cvl-for-mac" target="_blank" rel="noopener noreferrer" data-i18n="docs.macos.btn">打开项目仓库（下载占位） →</a>
+            </div>
+          </section>
+
           <section id="quickstart" data-products="all">
             <h2 data-i18n="docs.nav.quickstart">快速开始</h2>
             <h3 data-i18n="docs.quick.s1">1. 选择平台</h3>
@@ -116,79 +156,42 @@
             <p data-i18n="docs.quick.s2p">打开设置，选择目标中文地区用语与检测强度。浏览器扩展默认不对所有站点生效，需要时可开启「全站点默认开启检查」，或对当前站点单独设置。</p>
             <h3 data-i18n="docs.quick.s3">3. 输入并确认</h3>
             <p data-i18n="docs.quick.s3p">在编辑区输入、粘贴或选中文本。看到标记后，点击问题即可替换、忽略一次，或将词语加入允许词。</p>
+            <div data-products="browser">
+              <h3 data-i18n="docs.browser.use">使用</h3>
+              <ul>
+                <li data-i18n="docs.browser.li1">打开扩展弹窗，选择目标地区用语和检测强度。</li>
+                <li data-i18n="docs.browser.li2">在已启用检查的编辑区输入或粘贴文本，问题会以页面内标记和建议浮层显示。</li>
+                <li data-i18n="docs.browser.li3">在复查面板中逐项替换、忽略一次，或加入允许词。</li>
+                <li data-i18n="docs.browser.li4">选中文本后可单独转换，在可编辑区域中可将结果直接写回。</li>
+              </ul>
+              <h3 data-i18n="docs.browser.shortcut">站点与快捷键</h3>
+              <p data-i18n="docs.browser.shortcutP">「全站点默认开启检查」默认关闭；开启后所有站点默认生效，其下方的站点开关可针对当前站点单独覆盖。检测开关、允许词组、自定义词组和快捷键都可在弹窗中配置。</p>
+            </div>
+            <div data-products="office">
+              <h3 data-i18n="docs.office.use">使用</h3>
+              <ul>
+                <li data-i18n="docs.office.li1">在 Word 中打开任务窗格，选择目标地区用语。</li>
+                <li data-i18n="docs.office.li2">对文档执行检查，结果按条列出。</li>
+                <li data-i18n="docs.office.li3">逐条确认替换，或保留原文。</li>
+              </ul>
+              <div class="callout callout-note">
+                <p data-i18n-html="docs.office.note">该项目为非官方实现，与 Microsoft 无关。功能范围与已知限制见仓库 <code>docs/FEATURES.md</code>。</p>
+              </div>
+            </div>
+            <div data-products="macos">
+              <h3 data-i18n="docs.macos.use">使用</h3>
+              <ul>
+                <li data-i18n="docs.macos.li1">在菜单栏中选择目标地区用语，在输入框中直接看到实时标记与建议浮窗。</li>
+                <li data-i18n="docs.macos.li2">读不到文本的应用，可用全局快捷键检查或转换选中文本。</li>
+                <li data-i18n="docs.macos.li3">默认跳过密码框，可按应用启用或禁用。</li>
+                <li data-i18n="docs.macos.li4">允许词与自定义词组支持 CSV 和 OpenCC 词条格式导入导出。</li>
+              </ul>
+              <div class="callout">
+                <p data-i18n="docs.macos.local">文本只在本机处理，不联网、不上传。</p>
+              </div>
+            </div>
             <div class="callout callout-note">
               <p data-i18n="docs.quick.note">首次使用建议先确认目标地区：同一个词在不同地区的正确写法可能不同，例如「软件 / 軟體」「云端 / 雲端」。</p>
-            </div>
-          </section>
-
-          <section id="browser" data-products="browser">
-            <h2 data-i18n="docs.nav.browser">浏览器扩展</h2>
-            <p data-i18n-html="docs.browser.intro">适用于网页中的 <code>textarea</code>、文本 <code>input</code> 与 <code>contenteditable</code> 编辑区。</p>
-
-            <h3 data-i18n="docs.browser.install">安装</h3>
-            <div class="platform-grid">
-              <a class="platform-item" href="https://github.com/amlzq/chinese-variants-linter" target="_blank" rel="noopener noreferrer">
-                <strong data-i18n="docs.browser.store1">Chrome 网上应用店</strong><span data-i18n="docs.browser.storeSub">链接暂指向仓库 · 占位</span>
-              </a>
-              <a class="platform-item" href="https://github.com/amlzq/chinese-variants-linter" target="_blank" rel="noopener noreferrer">
-                <strong data-i18n="docs.browser.store2">Microsoft Edge 加载项</strong><span data-i18n="docs.browser.storeSub">链接暂指向仓库 · 占位</span>
-              </a>
-              <a class="platform-item" href="https://github.com/amlzq/chinese-variants-linter" target="_blank" rel="noopener noreferrer">
-                <strong data-i18n="docs.browser.store3">Firefox 附加组件</strong><span data-i18n="docs.browser.storeSub">链接暂指向仓库 · 占位</span>
-              </a>
-            </div>
-
-            <h3 data-i18n="docs.browser.use">使用</h3>
-            <ul>
-              <li data-i18n="docs.browser.li1">打开扩展弹窗，选择目标地区用语和检测强度。</li>
-              <li data-i18n="docs.browser.li2">在已启用检查的编辑区输入或粘贴文本，问题会以页面内标记和建议浮层显示。</li>
-              <li data-i18n="docs.browser.li3">在复查面板中逐项替换、忽略一次，或加入允许词。</li>
-              <li data-i18n="docs.browser.li4">选中文本后可单独转换，在可编辑区域中可将结果直接写回。</li>
-            </ul>
-
-            <h3 data-i18n="docs.browser.shortcut">站点与快捷键</h3>
-            <p data-i18n="docs.browser.shortcutP">「全站点默认开启检查」默认关闭；开启后所有站点默认生效，其下方的站点开关可针对当前站点单独覆盖。检测开关、允许词组、自定义词组和快捷键都可在弹窗中配置。</p>
-            <div class="callout">
-              <p data-i18n-html="docs.browser.perm">扩展只声明 <code>storage</code> 与 <code>activeTab</code> 权限，设置与词库保存在浏览器本地存储中。</p>
-            </div>
-          </section>
-
-          <section id="office" data-products="office">
-            <h2 data-i18n="docs.nav.office">Office 加载项</h2>
-            <p data-i18n="docs.office.intro">CVL for Office 是一个 Word 加载项（任务窗格）：检查文档中混用的简体 / 繁体字形与两岸三地用词，逐条替换到目标写法。检查全部在本机完成，文档内容不会上传。</p>
-
-            <h3 data-i18n="docs.office.req">环境要求与试用</h3>
-            <p data-i18n-html="docs.office.reqP">加载项需要 Word 桌面版或兼容环境。源码、构建步骤与试用方式见仓库中的 <code>docs/BUILD.md</code>。</p>
-            <a class="btn btn-secondary btn-small" href="https://github.com/amlzq/cvl-for-office" target="_blank" rel="noopener noreferrer" data-i18n="docs.office.btn">打开项目仓库（安装占位） →</a>
-
-            <h3 data-i18n="docs.office.use">使用</h3>
-            <ul>
-              <li data-i18n="docs.office.li1">在 Word 中打开任务窗格，选择目标地区用语。</li>
-              <li data-i18n="docs.office.li2">对文档执行检查，结果按条列出。</li>
-              <li data-i18n="docs.office.li3">逐条确认替换，或保留原文。</li>
-            </ul>
-            <div class="callout callout-note">
-              <p data-i18n-html="docs.office.note">该项目为非官方实现，与 Microsoft 无关。功能范围与已知限制见仓库 <code>docs/FEATURES.md</code>。</p>
-            </div>
-          </section>
-
-          <section id="macos" data-products="macos">
-            <h2 data-i18n="docs.nav.macos">macOS 应用</h2>
-            <p data-i18n="docs.macos.intro">中文变体检查器的 macOS 版。常驻菜单栏，在任意应用的输入框中检查中文简繁字形和地区用词是否与目标地区一致，并提供就地替换。</p>
-
-            <h3 data-i18n="docs.macos.install">安装</h3>
-            <p data-i18n="docs.macos.installP">构建与安装说明见项目仓库；当前下载链接以仓库地址占位。</p>
-            <a class="btn btn-secondary btn-small" href="https://github.com/amlzq/cvl-for-mac" target="_blank" rel="noopener noreferrer" data-i18n="docs.macos.btn">打开项目仓库（下载占位） →</a>
-
-            <h3 data-i18n="docs.macos.use">使用</h3>
-            <ul>
-              <li data-i18n="docs.macos.li1">在菜单栏中选择目标地区用语，在输入框中直接看到实时标记与建议浮窗。</li>
-              <li data-i18n="docs.macos.li2">读不到文本的应用，可用全局快捷键检查或转换选中文本。</li>
-              <li data-i18n="docs.macos.li3">默认跳过密码框，可按应用启用或禁用。</li>
-              <li data-i18n="docs.macos.li4">允许词与自定义词组支持 CSV 和 OpenCC 词条格式导入导出。</li>
-            </ul>
-            <div class="callout">
-              <p data-i18n="docs.macos.local">文本只在本机处理，不联网、不上传。</p>
             </div>
           </section>
 
@@ -250,19 +253,6 @@
             </details>
           </section>
 
-          <section id="legal" data-products="all">
-            <h2 data-i18n="docs.legal.title">隐私与许可</h2>
-            <p data-i18n-html="docs.legal.p1">
-              三个产品均以 MIT 许可开源。浏览器扩展只声明 <code>storage</code> 与 <code>activeTab</code> 权限；文本、词库与设置均在本地处理。Office 加载项与 macOS 应用同样不上传内容。
-            </p>
-            <p data-i18n="docs.legal.p2">本项目为非官方实现，与 Microsoft 及浏览器厂商无关。</p>
-            <div class="resource-grid">
-              <a class="resource-card" href="https://github.com/amlzq/chinese-variants-linter" target="_blank" rel="noopener noreferrer"><span data-i18n="docs.legal.repo1">浏览器扩展仓库</span> <span aria-hidden="true">↗</span></a>
-              <a class="resource-card" href="https://github.com/amlzq/cvl-for-office" target="_blank" rel="noopener noreferrer"><span data-i18n="docs.legal.repo2">Office 加载项仓库</span> <span aria-hidden="true">↗</span></a>
-              <a class="resource-card" href="https://github.com/amlzq/cvl-for-mac" target="_blank" rel="noopener noreferrer"><span data-i18n="docs.legal.repo3">macOS 应用仓库</span> <span aria-hidden="true">↗</span></a>
-              <a class="resource-card" href="https://github.com/amlzq" target="_blank" rel="noopener noreferrer"><span data-i18n="docs.legal.repo4">GitHub 主页</span> <span aria-hidden="true">↗</span></a>
-            </div>
-          </section>
         </article>
 
         <aside class="docs-toc" aria-label="目录">
@@ -282,15 +272,17 @@
         </div>
         <div class="footer-cols">
           <div class="footer-col">
-            <h4 data-i18n="footer.site">站点</h4>
+            <h4 data-i18n="footer.products">产品</h4>
             <ul>
-              <li><a href="/" data-i18n="nav.home">首页</a></li>
-              <li><a href="/docs.html" data-i18n="nav.docs">文档</a></li>
-              <li><a href="/docs.html#faq" data-i18n="footer.faq">常见问题</a></li>
+              <li><a href="https://chromewebstore.google.com/detail/chinese-variants-linter/phnegnjebgcgjhdjedbpnejfplbfflbb" target="_blank" rel="noopener noreferrer">CVL for Chrome</a></li>
+              <li><a href="https://addons.mozilla.org/en-US/firefox/addon/chinese-variants-linter/" target="_blank" rel="noopener noreferrer">CVL for Firefox</a></li>
+              <li><a href="https://microsoftedge.microsoft.com/addons/detail/chinese-variants-linter/nbdholbmndoilmlepmgmfnnmoimcfibg" target="_blank" rel="noopener noreferrer">CVL for Edge</a></li>
+              <li><a href="https://github.com/amlzq/cvl-for-office" target="_blank" rel="noopener noreferrer">CVL for MS Office</a></li>
+              <li><a href="https://github.com/amlzq/cvl-for-mac" target="_blank" rel="noopener noreferrer">CVL for Mac</a></li>
             </ul>
           </div>
           <div class="footer-col">
-            <h4 data-i18n="footer.products">产品</h4>
+            <h4 data-i18n="footer.docs">文档</h4>
             <ul>
               <li><a href="https://github.com/amlzq/chinese-variants-linter" target="_blank" rel="noopener noreferrer" data-i18n="footer.product.browser">浏览器扩展</a></li>
               <li><a href="https://github.com/amlzq/cvl-for-office" target="_blank" rel="noopener noreferrer" data-i18n="footer.product.office">Office 加载项</a></li>
@@ -301,7 +293,6 @@
             <h4 data-i18n="footer.resources">资源</h4>
             <ul>
               <li><a href="https://github.com/amlzq" target="_blank" rel="noopener noreferrer">GitHub</a></li>
-              <li><a href="/docs.html#legal" data-i18n="footer.privacy">隐私与许可</a></li>
               <li><a href="/privacy.html" data-i18n="footer.privacyPolicy">隐私权政策</a></li>
               <li><a href="/terms.html" data-i18n="footer.terms">服务条款</a></li>
             </ul>

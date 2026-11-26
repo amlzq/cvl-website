@@ -6,11 +6,17 @@ const tocNav = document.getElementById('docs-toc-nav')
 let headings = []
 let ticking = false
 
+function isVisible(element) {
+  let node = element
+  while (node && node !== content) {
+    if (node.hidden) return false
+    node = node.parentElement
+  }
+  return Boolean(node)
+}
+
 function visibleHeadings() {
-  return headings.filter((heading) => {
-    const section = heading.closest('section[data-products]')
-    return section && !section.hidden
-  })
+  return headings.filter(isVisible)
 }
 
 function updateActive() {
@@ -49,10 +55,7 @@ function requestUpdate() {
 function buildToc() {
   if (!content || !tocNav) return
 
-  headings = Array.from(content.querySelectorAll('h2, h3')).filter((heading) => {
-    const section = heading.closest('section[data-products]')
-    return section && !section.hidden
-  })
+  headings = Array.from(content.querySelectorAll('h2, h3')).filter(isVisible)
 
   headings.forEach((heading, index) => {
     if (heading.dataset.tocId) return

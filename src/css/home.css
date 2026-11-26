@@ -361,34 +361,34 @@
   transform: rotate(-45deg);
 }
 
-.product-link {
-  display: inline-flex;
+.store-links {
+  display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 10px;
+  gap: 12px;
   margin-top: auto;
-  padding: 12px 14px;
-  border: 1px solid var(--border-strong);
+  padding-top: 18px;
+  border-top: 1px solid var(--border);
+}
+
+.store-links a {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border: 1px solid var(--border);
   border-radius: 10px;
-  color: var(--text);
-  font-size: 14px;
-  font-weight: 650;
-  transition: border-color 0.18s ease, color 0.18s ease, background-color 0.18s ease;
+  background: var(--bg-elev);
+  transition: border-color 0.18s ease, transform 0.18s ease;
 }
 
-.product-link:hover {
+.store-links a:hover {
   border-color: var(--brand);
-  color: var(--brand);
-  background: var(--brand-soft);
+  transform: translateY(-2px);
 }
 
-.product-link .arrow {
-  font-size: 17px;
-  transition: transform 0.18s ease;
-}
-
-.product-link:hover .arrow {
-  transform: translateX(3px);
+.store-links img {
+  width: 26px;
+  height: 26px;
 }
 
 .steps {

@@ -1,4 +1,11 @@
+import { t, onLocaleChange } from './i18n.js'
+
 const VALID = ['browser', 'office', 'macos']
+const LABELS = {
+  browser: 'docs.nav.browser',
+  office: 'docs.nav.office',
+  macos: 'docs.nav.macos',
+}
 const PARAM = 'product'
 const listeners = new Set()
 let current = 'browser'
@@ -23,6 +30,9 @@ function applyProduct() {
     link.classList.toggle('is-active', active)
     link.setAttribute('aria-current', active ? 'true' : 'false')
   })
+
+  const currentLabel = document.querySelector('[data-product-current]')
+  if (currentLabel) currentLabel.textContent = t(LABELS[current])
 }
 
 function closeMenu() {
@@ -83,3 +93,5 @@ export function initProducts() {
   initMenu()
   applyProduct()
 }
+
+onLocaleChange(applyProduct)

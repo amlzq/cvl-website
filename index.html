@@ -163,18 +163,25 @@
                 <span class="product-icon" aria-hidden="true">
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="4" width="19" height="16" rx="2.5" /><path d="M2.5 9h19M7 6.5h.01M10 6.5h.01" /></svg>
                 </span>
-                <h3 data-i18n="products.browser.title">浏览器扩展</h3>
+                <h3 data-i18n="products.browser.title">Browser 扩展</h3>
               </div>
               <p class="product-desc" data-i18n="products.browser.desc">在网页编辑区实时检查 textarea、input 与 contenteditable 内容，页面内标记并就地替换。</p>
-              <div class="chip-list"><span class="chip">Chrome</span><span class="chip">Edge</span><span class="chip">Firefox</span></div>
               <ul class="product-features">
                 <li data-i18n="products.browser.f1">输入后自动检查，粘贴立即检查</li>
                 <li data-i18n="products.browser.f2">站点级启停与快捷键</li>
                 <li data-i18n="products.browser.f3">允许词、自定义词组与词库导入导出</li>
               </ul>
-              <a class="product-link" href="https://github.com/amlzq/chinese-variants-linter" target="_blank" rel="noopener noreferrer">
-                <span data-i18n="products.link.install">查看仓库 / 安装</span> <span class="arrow" aria-hidden="true">→</span>
-              </a>
+              <div class="store-links">
+                <a href="https://chromewebstore.google.com/detail/chinese-variants-linter/phnegnjebgcgjhdjedbpnejfplbfflbb" target="_blank" rel="noopener noreferrer" aria-label="Chrome" title="Chrome">
+                  <img src="https://www.google.com/chrome/static/images/chrome-logo-m100.svg" alt="Chrome" width="26" height="26" loading="lazy" />
+                </a>
+                <a href="https://addons.mozilla.org/en-US/firefox/addon/chinese-variants-linter/" target="_blank" rel="noopener noreferrer" aria-label="Firefox" title="Firefox">
+                  <img src="https://www.mozilla.org/media/protocol/img/logos/firefox/browser/logo.svg" alt="Firefox" width="26" height="26" loading="lazy" />
+                </a>
+                <a href="https://microsoftedge.microsoft.com/addons/detail/chinese-variants-linter/nbdholbmndoilmlepmgmfnnmoimcfibg" target="_blank" rel="noopener noreferrer" aria-label="Microsoft Edge" title="Microsoft Edge">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/9/98/Microsoft_Edge_logo_%282019%29.svg" alt="Microsoft Edge" width="26" height="26" loading="lazy" />
+                </a>
+              </div>
             </article>
 
             <article class="product-card">
@@ -191,9 +198,11 @@
                 <li data-i18n="products.office.f2">简繁字形与两岸三地用词检测</li>
                 <li data-i18n="products.office.f3">检查全部在本机完成</li>
               </ul>
-              <a class="product-link" href="https://github.com/amlzq/cvl-for-office" target="_blank" rel="noopener noreferrer">
-                <span data-i18n="products.link.install">查看仓库 / 安装</span> <span class="arrow" aria-hidden="true">→</span>
-              </a>
+              <div class="store-links">
+                <a href="https://github.com/amlzq/cvl-for-office" target="_blank" rel="noopener noreferrer" aria-label="Office" title="Office">
+                  <img src="https://www.google.com/s2/favicons?domain=office.com&amp;sz=128" alt="Office" width="26" height="26" loading="lazy" />
+                </a>
+              </div>
             </article>
 
             <article class="product-card">
@@ -201,7 +210,7 @@
                 <span class="product-icon" aria-hidden="true">
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="13" rx="2" /><path d="M8 21h8M12 17v4" /></svg>
                 </span>
-                <h3 data-i18n="products.macos.title">macOS 应用</h3>
+                <h3 data-i18n="products.macos.title">Desktop 应用</h3>
               </div>
               <p class="product-desc" data-i18n="products.macos.desc">常驻菜单栏，在任意应用的输入框中检查；读不到文本时用全局快捷键检查或转换选中文本。</p>
               <div class="chip-list"><span class="chip">macOS</span><span class="chip" data-i18n="products.macos.chip2">菜单栏</span><span class="chip" data-i18n="products.macos.chip3">全局快捷键</span></div>
@@ -210,9 +219,11 @@
                 <li data-i18n="products.macos.f2">默认跳过密码框，可按应用启停</li>
                 <li data-i18n="products.macos.f3">词库支持 CSV / OpenCC 导入导出</li>
               </ul>
-              <a class="product-link" href="https://github.com/amlzq/cvl-for-mac" target="_blank" rel="noopener noreferrer">
-                <span data-i18n="products.link.download">查看仓库 / 下载</span> <span class="arrow" aria-hidden="true">→</span>
-              </a>
+              <div class="store-links">
+                <a href="https://github.com/amlzq/cvl-for-mac" target="_blank" rel="noopener noreferrer" aria-label="Apple" title="Apple">
+                  <img src="https://www.google.com/s2/favicons?domain=apple.com&amp;sz=128" alt="Apple" width="26" height="26" loading="lazy" />
+                </a>
+              </div>
             </article>
           </div>
         </div>
@@ -253,15 +264,17 @@
         </div>
         <div class="footer-cols">
           <div class="footer-col">
-            <h4 data-i18n="footer.site">站点</h4>
+            <h4 data-i18n="footer.products">产品</h4>
             <ul>
-              <li><a href="/" data-i18n="nav.home">首页</a></li>
-              <li><a href="/docs.html" data-i18n="nav.docs">文档</a></li>
-              <li><a href="/docs.html#faq" data-i18n="footer.faq">常见问题</a></li>
+              <li><a href="https://chromewebstore.google.com/detail/chinese-variants-linter/phnegnjebgcgjhdjedbpnejfplbfflbb" target="_blank" rel="noopener noreferrer">CVL for Chrome</a></li>
+              <li><a href="https://addons.mozilla.org/en-US/firefox/addon/chinese-variants-linter/" target="_blank" rel="noopener noreferrer">CVL for Firefox</a></li>
+              <li><a href="https://microsoftedge.microsoft.com/addons/detail/chinese-variants-linter/nbdholbmndoilmlepmgmfnnmoimcfibg" target="_blank" rel="noopener noreferrer">CVL for Edge</a></li>
+              <li><a href="https://github.com/amlzq/cvl-for-office" target="_blank" rel="noopener noreferrer">CVL for MS Office</a></li>
+              <li><a href="https://github.com/amlzq/cvl-for-mac" target="_blank" rel="noopener noreferrer">CVL for Mac</a></li>
             </ul>
           </div>
           <div class="footer-col">
-            <h4 data-i18n="footer.products">产品</h4>
+            <h4 data-i18n="footer.docs">文档</h4>
             <ul>
               <li><a href="https://github.com/amlzq/chinese-variants-linter" target="_blank" rel="noopener noreferrer" data-i18n="footer.product.browser">浏览器扩展</a></li>
               <li><a href="https://github.com/amlzq/cvl-for-office" target="_blank" rel="noopener noreferrer" data-i18n="footer.product.office">Office 加载项</a></li>
@@ -272,7 +285,6 @@
             <h4 data-i18n="footer.resources">资源</h4>
             <ul>
               <li><a href="https://github.com/amlzq" target="_blank" rel="noopener noreferrer">GitHub</a></li>
-              <li><a href="/docs.html#legal" data-i18n="footer.privacy">隐私与许可</a></li>
               <li><a href="/privacy.html" data-i18n="footer.privacyPolicy">隐私权政策</a></li>
               <li><a href="/terms.html" data-i18n="footer.terms">服务条款</a></li>
             </ul>
