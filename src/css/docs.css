@@ -158,6 +158,11 @@
   margin: 34px 0 12px;
 }
 
+.docs-content h4 {
+  font-size: 1rem;
+  margin: 26px 0 10px;
+}
+
 .docs-content p,
 .docs-content li {
   color: var(--text-muted);
