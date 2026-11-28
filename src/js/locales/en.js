@@ -12,7 +12,6 @@ export default {
   'lang.label': 'Select language',
   'common.comingSoon': 'Coming soon',
 
-  'footer.intro': 'Checks character forms and regional word choices as you type, with suggested fixes in place. Text stays on your device.',
   'footer.products': 'Products',
   'footer.docs': 'Docs',
   'footer.resources': 'Resources',
@@ -20,7 +19,7 @@ export default {
 
   'hero.title1': 'Make every Chinese character',
   'hero.title2': 'fit your target region',
-  'hero.desc': 'CVL checks simplified/traditional character forms and regional word choices as you type, then suggests fixes in place. Text is processed locally and never uploaded.',
+  'hero.desc': 'Checks simplified/traditional character forms and regional word choices as you type, then suggests fixes in place. Text is processed locally and never uploaded.',
   'hero.cta': 'Pick your platform',
   'hero.docs': 'Read the docs',
 

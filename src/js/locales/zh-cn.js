@@ -12,7 +12,6 @@ export default {
   'lang.label': '选择语言',
   'common.comingSoon': '马上到来',
 
-  'footer.intro': '在输入时检查简繁字形与地区用词，给出就地修改建议。文本只在本机处理。',
   'footer.products': '产品',
   'footer.docs': '文档',
   'footer.resources': '资源',
@@ -20,7 +19,7 @@ export default {
 
   'hero.title1': '让每一处中文，',
   'hero.title2': '都符合目标地区用语',
-  'hero.desc': 'CVL 在输入时检查简繁字形与两岸三地用词差异，给出就地替换建议。文本只在本机处理，不上传、不联网。',
+  'hero.desc': '在输入时检查简繁字形与两岸三地用词差异，给出就地替换建议。文本只在本机处理，不上传、不联网。',
   'hero.cta': '选择你的平台',
   'hero.docs': '阅读文档',
 

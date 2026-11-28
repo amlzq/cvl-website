@@ -12,7 +12,6 @@ export default {
   'lang.label': '選擇語言',
   'common.comingSoon': '馬上到來',
 
-  'footer.intro': '在輸入時檢查簡繁字形與地區用詞，給出就地修改建議。文字只在本機處理。',
   'footer.products': '產品',
   'footer.docs': '文件',
   'footer.resources': '資源',
@@ -20,7 +19,7 @@ export default {
 
   'hero.title1': '讓每一處中文，',
   'hero.title2': '都符合目標地區用語',
-  'hero.desc': 'CVL 在輸入時檢查簡繁字形與兩岸三地用詞差異，給出就地替換建議。文字只在本機處理，不上傳、不連網。',
+  'hero.desc': '在輸入時檢查簡繁字形與兩岸三地用詞差異，給出就地替換建議。文字只在本機處理，不上傳、不連網。',
   'hero.cta': '選擇你的平台',
   'hero.docs': '閱讀文件',
 
