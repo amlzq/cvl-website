@@ -10,6 +10,7 @@ export default {
   'a11y.theme': 'Toggle light and dark theme',
   'a11y.menu': 'Open menu',
   'lang.label': 'Select language',
+  'common.comingSoon': 'Coming soon',
 
   'footer.intro': 'Checks character forms and regional word choices as you type, with suggested fixes in place. Text stays on your device.',
   'footer.products': 'Products',

@@ -1,10 +1,8 @@
 import { t, onLocaleChange } from './i18n.js'
 
-const VALID = ['browser', 'office', 'desktop']
+const VALID = ['browser']
 const LABELS = {
   browser: 'docs.nav.browser',
-  office: 'docs.nav.office',
-  desktop: 'docs.nav.desktop',
 }
 const PARAM = 'product'
 const listeners = new Set()

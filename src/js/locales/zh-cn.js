@@ -4,12 +4,13 @@ export default {
   'meta.docs.title': '使用文档 · 中文变体检查器 CVL',
   'meta.docs.desc': '中文变体检查器 CVL 使用文档：浏览器扩展、Office 加载项与 macOS 应用的安装、使用、词库自定义与常见问题。',
 
-  'brand.name': '中文变体检查器',
+  'brand.name': '中文地区用语检查',
   'nav.home': '首页',
   'nav.docs': '文档',
   'a11y.theme': '切换深浅色主题',
   'a11y.menu': '打开菜单',
   'lang.label': '选择语言',
+  'common.comingSoon': '马上到来',
 
   'footer.intro': '在输入时检查简繁字形与地区用词，给出就地修改建议。文本只在本机处理。',
   'footer.products': '产品',

@@ -65,6 +65,9 @@ function applyTranslations() {
   document.querySelectorAll('[data-i18n-title]').forEach((el) => {
     el.setAttribute('title', t(el.dataset.i18nTitle))
   })
+  document.querySelectorAll('[data-i18n-tip]').forEach((el) => {
+    el.dataset.tip = t(el.dataset.i18nTip)
+  })
 
   const page = document.body.dataset.page
   document.title = t(`meta.${page}.title`)
