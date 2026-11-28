@@ -77,8 +77,8 @@ export default {
   'steps.3.desc': 'When you see a mark, replace it, ignore it once, or add the term to your allow list.',
 
 
-  'docs.hero.title': 'From installation to custom dictionaries',
-  'docs.hero.desc': 'All three platforms share one approach: choose a target region, see differences as you type, and confirm replacements in place.',
+  'docs.hero.title': 'Documentation',
+  'docs.hero.selectProduct': 'Select a product',
   'docs.nav.overview': 'Overview',
   'docs.nav.install': 'Installation',
   'docs.install.office': 'Microsoft Office',
@@ -94,11 +94,9 @@ export default {
   'docs.overview.p': 'It is useful for content editing, support replies, form filling and proofreading before cross-region publishing. Checks run locally; web text, document content and dictionaries are never uploaded.',
   'docs.overview.callout': '<strong>Four target regions:</strong> Simplified Chinese, Chinese (Taiwan), Chinese (Hong Kong) and Traditional Chinese.',
 
-  'docs.quick.s1': '1. Pick a platform',
-  'docs.quick.s1p': 'Complete installation for the selected product; see the Installation section below for details.',
-  'docs.quick.s2': '2. Set the target region',
+  'docs.quick.s2': '1. Set the target region',
   'docs.quick.s2p': 'Open the selected product’s settings and choose the target Chinese region. See the product-specific usage notes below for additional options.',
-  'docs.quick.s3': '3. Type and confirm',
+  'docs.quick.s3': '2. Type and confirm',
   'docs.quick.s3p': 'Type, paste or select text in an editor. When you see a mark, click it to replace, ignore once, or add the word to your allow list.',
   'docs.quick.note': 'Confirm the target region first: the same term can have different correct forms in different regions, for example 软件 / 軟體 or 云端 / 雲端.',
 
@@ -154,6 +152,8 @@ export default {
   'docs.faq.a5': 'Some apps do not expose text. In that case use the global shortcut to check or convert selected text.',
   'docs.faq.q6': 'How do I back up custom dictionaries?',
   'docs.faq.a6': 'Export to a CSV or OpenCC file in settings, then import it again for the matching region when needed.',
+  'docs.faq.q7': 'Having trouble installing?',
+  'docs.faq.a7': `Get help on <a href="https://github.com/amlzq/chinese-variants-linter/issues" target="_blank" rel="noopener noreferrer">GitHub issues</a>, or email <a href="mailto:support@zeaon.dev">support@zeaon.dev</a>.`,
 
   'docs.copy': 'Copy',
   'docs.copied': 'Copied',

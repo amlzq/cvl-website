@@ -77,8 +77,8 @@ export default {
   'steps.3.desc': '在編輯區看到標記後逐條取代、忽略一次，或把詞語加入允許詞。',
 
 
-  'docs.hero.title': '從安裝到自訂詞庫',
-  'docs.hero.desc': '三個平台共用同一套檢查思路：選定目標地區，輸入時看到差異，確認後就地取代。',
+  'docs.hero.title': '使用文件',
+  'docs.hero.selectProduct': '選擇產品',
   'docs.nav.overview': '概覽',
   'docs.nav.install': '安裝',
   'docs.install.office': 'Microsoft Office',
@@ -94,11 +94,9 @@ export default {
   'docs.overview.p': '它適用於內容編輯、客服話術、表單填寫和跨地區發布前的中文校對。檢查在本機完成，網頁文字、文件內容與詞庫不會上傳到伺服器。',
   'docs.overview.callout': '<strong>四種目標地區用語：</strong>簡體中文、中文（台灣）、中文（香港）、繁體中文。',
 
-  'docs.quick.s1': '1. 選擇平台',
-  'docs.quick.s1p': '按所選產品完成安裝，具體方式見下方「安裝」章節。',
-  'docs.quick.s2': '2. 設定目標地區',
+  'docs.quick.s2': '1. 設定目標地區',
   'docs.quick.s2p': '開啟所選產品的設定，選擇目標中文地區用語。更多選項見對應產品的使用說明。',
-  'docs.quick.s3': '3. 輸入並確認',
+  'docs.quick.s3': '2. 輸入並確認',
   'docs.quick.s3p': '在編輯區輸入、貼上或選取文字。看到標記後，點擊問題即可取代、忽略一次，或將詞語加入允許詞。',
   'docs.quick.note': '首次使用建議先確認目標地區：同一個詞在不同地區的正確寫法可能不同，例如「软件 / 軟體」「云端 / 雲端」。',
 
@@ -154,6 +152,8 @@ export default {
   'docs.faq.a5': '部分應用程式不提供文字讀取權限。此時可用全域快捷鍵對選取文字執行檢查或轉換。',
   'docs.faq.q6': '如何備份自訂詞庫？',
   'docs.faq.a6': '在設定中匯出為 CSV 或 OpenCC 詞條檔案；需要時再按對應地區匯入。',
+  'docs.faq.q7': '安裝遇到問題？',
+  'docs.faq.a7': `可到 <a href="https://github.com/amlzq/chinese-variants-linter/issues" target="_blank" rel="noopener noreferrer">GitHub Issues</a> 尋求協助，或發送電郵至 <a href="mailto:support@zeaon.dev">support@zeaon.dev</a>。`,
 
   'docs.copy': '複製',
   'docs.copied': '已複製',
