@@ -78,7 +78,6 @@ export default {
 
 
   'docs.hero.title': '使用文档',
-  'docs.hero.selectProduct': '选择产品',
   'docs.nav.overview': '概览',
   'docs.nav.install': '安装',
   'docs.install.office': 'Microsoft Office',
@@ -94,9 +93,9 @@ export default {
   'docs.overview.p': '它适用于内容编辑、客服话术、表单填写和跨地区发布前的中文校对。检查在本机完成，网页文本、文档内容与词库不会上传到服务器。',
   'docs.overview.callout': '<strong>四种目标地区用语：</strong>简体中文、中文（台湾）、中文（香港）、繁体中文。',
 
-  'docs.quick.s2': '1. 设定目标地区',
+  'docs.quick.s2': '设定目标地区',
   'docs.quick.s2p': '打开所选产品的设置，选择目标中文地区用语。更多选项见对应产品的使用说明。',
-  'docs.quick.s3': '2. 输入并确认',
+  'docs.quick.s3': '输入并确认',
   'docs.quick.s3p': '在编辑区输入、粘贴或选中文本。看到标记后，点击问题即可替换、忽略一次，或将词语加入允许词。',
   'docs.quick.note': '首次使用建议先确认目标地区：同一个词在不同地区的正确写法可能不同，例如「软件 / 軟體」「云端 / 雲端」。',
 
@@ -152,7 +151,7 @@ export default {
   'docs.faq.a5': '部分应用不提供文本读取权限。此时可用全局快捷键对选中文本执行检查或转换。',
   'docs.faq.q6': '如何备份自定义词库？',
   'docs.faq.a6': '在设置中导出为 CSV 或 OpenCC 词条文件；需要时再按对应地区导入。',
-  'docs.faq.q7': '安装遇到问题？',
+  'docs.faq.q7': '联系我们',
   'docs.faq.a7': `可在 <a href="https://github.com/amlzq/chinese-variants-linter/issues" target="_blank" rel="noopener noreferrer">GitHub Issues</a> 获取帮助，或发送邮件至 <a href="mailto:support@zeaon.dev">support@zeaon.dev</a>。`,
 
   'docs.copy': '复制',

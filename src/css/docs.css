@@ -13,17 +13,21 @@
 }
 
 .docs-hero-copy {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
   min-width: 0;
 }
 
 .docs-hero .product-hero-toggle {
-  min-height: 30px;
+  min-height: 32px;
   padding: 5px 12px;
   border-color: var(--border);
   background: transparent;
   color: var(--text-muted);
-  font-size: 13px;
-  font-weight: 550;
+  font-size: 14px;
+  font-weight: 500;
 }
 
 .docs-hero .product-hero-toggle:hover {
@@ -50,19 +54,7 @@
 
 .docs-hero h1 {
   font-size: clamp(2rem, 4vw, 2.8rem);
-  margin: 0 0 14px;
-}
-
-.docs-hero-product {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 12px;
-}
-
-.docs-hero-label {
-  color: var(--text-muted);
-  font-size: 14px;
+  margin: 0;
 }
 
 .docs-shell {
